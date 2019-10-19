@@ -5,7 +5,7 @@ def fix_charset(path):
     with open(path, 'rb') as f:
         html = f.readlines()
     html[4] = (b'<meta http-equiv="Content-Type" content="text/html; '
-               b'charset=iso-8859-1">\r\n</head>\r\n')
+               b'charset=ISO-8859-1">\r\n</head>\r\n')
     html = b''.join(html)
     with open(path, 'wb') as f:
         f.write(html)
