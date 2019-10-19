@@ -15,6 +15,7 @@ def main():
     for path in glob.glob('man/*.html'):
         if path.endswith('index.html'):
             print('Ignoring', path, '...')
+            continue
         fix_charset(path)
 
 
